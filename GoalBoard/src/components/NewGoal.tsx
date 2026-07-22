@@ -29,18 +29,16 @@ export default function NewGoal({ onAddGoal }: NewGoalProps) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <p>
+        <form className="new-goal-form" onSubmit={handleSubmit}>
+            <div className="control">
                 <label htmlFor="goal">Your goal</label>
-                <input type="text" name="goal" id="goal" ref={goal} required />
-            </p>
-            <p>
+                <input type="text" name="goal" id="goal" ref={goal} placeholder="e.g. Master React" required />
+            </div>
+            <div className="control">
                 <label htmlFor="summary">Short Summary</label>
-                <input type="text" name="summary" id="summary" ref={summary} required />
-            </p>
-            <p>
-                <button type="submit">Add Goal</button>
-            </p>
+                <input type="text" name="summary" id="summary" ref={summary} placeholder="e.g. Build real-world projects" required />
+            </div>
+            <button type="submit">Add Goal</button>
         </form>
     );
 }

@@ -30,6 +30,7 @@ header {
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2.5rem;
 }
 
 img {
@@ -44,51 +45,97 @@ header h1 {
   color: #f7e596;
 }
 
+.new-goal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #333c3f;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
 label {
-  display: block;
-  font-size: 0.85rem;
-  font-weight: bold;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #dfd9be;
+  color: #b7c4c0;
 }
 
 input {
   font: inherit;
   width: 100%;
-  padding: 0.5rem;
-  background-color: #b4b6c4;
-  border: none;
-  border-radius: 4px;
+  padding: 0.65rem 0.85rem;
+  background-color: #465156;
+  color: #f0f6f8;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder {
+  color: #8b969a;
+}
+
+input:hover {
+  background-color: #4c585d;
+}
+
+input:focus {
+  outline: none;
+  background-color: #4c585d;
+  border-color: #f7e596;
+  box-shadow: 0 0 0 3px rgba(247, 229, 150, 0.25);
 }
 
 form button {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 0.75rem;
-  margin-top: 1rem;
-  background-color: #f7e596;
+  padding: 0.8rem;
+  margin-top: 0.25rem;
+  background: linear-gradient(135deg, #f7e596, #f9d76a);
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   font: inherit;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   color: #3a4346;
   cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
 }
 
 form button:hover {
-  background-color: #f9e175;
+  background: linear-gradient(135deg, #f9e175, #fbd85a);
+  box-shadow: 0 4px 14px rgba(247, 229, 150, 0.35);
+  transform: translateY(-1px);
+}
+
+form button:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 li {
+  flex: 1 1 15rem;
   background-color: #475357;
   padding: 1rem;
   border-radius: 4px;
